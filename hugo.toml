@@ -10,9 +10,29 @@ weight = 20
 [[menus.main]]
 name = 'Posts'
 pageRef = '/posts'
-weight = 20
+weight = 30
 
+[[menus.main]]
+name = 'Graph'
+pageRef = '/graph'
+weight = 40
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
 [module]
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'

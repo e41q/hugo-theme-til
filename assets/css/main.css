@@ -1,5 +1,6 @@
 @import 'chroma.css';
-
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -293,7 +294,9 @@
 
     @apply motion-safe:transition-all lg:absolute lg:right-0 lg:w-48 lg:cursor-default;
 
-    @media screen(lg) {
+    /** TODO вернуть использование переменной. Почему-то lg остаётся как есть **/
+    /* @media screen(lg) { */
+    @media (min-width: 1024px) {
       margin-right: calc(-1 * theme(width.48) - 1 * theme(margin.16));
     }
   }

@@ -32,8 +32,8 @@
 {{- range .AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" />
 {{- end }}
-{{ partialCached "head/css" . }}
-{{ partialCached "head/js" . }}
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
 {{- if or .Params.math site.Params.math }}
   {{ partial "head/math" . }}
 {{- end }}
