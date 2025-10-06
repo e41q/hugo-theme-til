@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{- $imgResources := .Resources.ByType "image" -}}
   <article class="main">
-    <header>
+    <header class="prose prose-slate max-w-none mb-8">
       <h1 class="!mb-1">{{ .Title | title }}</h1>
 
       {{- with .Date }}
@@ -28,8 +28,9 @@
         </figure>
       {{- end }}
     </header>
-
-    {{ .Content }}
+    <div class="prose prose-slate max-w-none relative">
+      {{ .Content }}
+    </div>
   </article>
 
   {{- if or (eq .Section "posts") (eq .Section "notes") }}

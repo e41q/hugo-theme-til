@@ -15,7 +15,7 @@
 {{- $relatedNotes := where (.Site.RegularPages.Related .) "Section" "notes" | first 5 -}}
 {{- $postsCount := add ( len $incomingPosts ) ( len $outgoingPosts ) ( len $relatedPosts ) -}}
 {{- $notesCount := add ( len $incomingNotes ) ( len $outgoingNotes ) ( len $relatedNotes ) -}}
-<aside class="not-prose flex flex-col space-y-8 border-t pt-6">
+<aside class="not-prose flex flex-col space-y-8 border-t mt-8 pt-6 pr-6 clear-both">
   {{- with .GetTerms "categories" }}
     <section class="flex flex-col space-y-4">
       <h2 class="flex flex-row items-center space-x-2 text-lg font-semibold">
