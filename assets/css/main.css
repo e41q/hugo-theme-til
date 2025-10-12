@@ -37,7 +37,12 @@
     @apply !text-white/70 hover:!text-sky-400;
   }
 
+  article.main .goat.svg-container {
+    @apply w-[90%];
+  }
+
   article.main figure {
+    @apply w-[90%];
     img {
       @apply mb-0 border p-1;
     }
@@ -50,7 +55,7 @@
       }
 
       p {
-        @apply mt-1 italic;
+        @apply mt-1 m-auto italic;
       }
     }
   }
