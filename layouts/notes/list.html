@@ -1,4 +1,5 @@
 {{ define "main" }}
+  <div class="max-w-[90%]">
   <h1 class="flex flex-row items-center space-x-2">
     <span>{{ .Title }}</span>
     {{- with .OutputFormats.Get "rss" }}
@@ -48,5 +49,6 @@
       {{ partial "notes/list.html" $pager.Pages }}
       {{ if gt $pager.TotalPages 1 }}{{ partial "pagination.html" . }}{{ end }}
     </section>
+  </div>
   </div>
 {{ end }}
